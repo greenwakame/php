@@ -13,5 +13,16 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	//return View::make('hello');
+    return View::make('hello.index');
 });
+
+Route::get('user','UserController@showIndex');
+
+Route::controller('users','UserController');
+
+//DB接続テスト
+Route::get('database',function(){
+ $data=DB::select('select * from collections where id=?',array(1));
+ echo var_dump($data);
+ });
