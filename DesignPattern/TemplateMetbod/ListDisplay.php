@@ -1,5 +1,5 @@
 <?php
-requier_once 'AbstractDisplay.php';
+require_once 'AbstractDisplay.php';
 
 class ListDisplay extends AbstractDisplay
 {
